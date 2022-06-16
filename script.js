@@ -37,6 +37,9 @@ let gameOver = false;
 let totalMatchPlayed = 0;
 let p1WonScoreValue = 0;
 let p2WonScoreValue = 0;
+//
+let Player1name = "Player-1";
+let Player2name = "Player-2";
 
 //add winning value with playingToBtn
 playingToBtn.textContent = winningScore;
@@ -92,7 +95,6 @@ p1Btn.addEventListener("click", (evtp1) => {
     p1Btn.setAttribute("disabled", "disabled");
     p2Btn.removeAttribute("disabled");
 
-    // disableButton(p1Btn, p2Btn, "p2");
     gameOverFunc();
   }
 });
@@ -102,7 +104,7 @@ p2Btn.addEventListener("click", (evtp2) => {
     diceRandomGenerator = diceELm.textContent = Math.ceil(Math.random() * 6);
     p2ScoreValue += diceRandomGenerator;
     p2Score.textContent = p2ScoreValue;
-    // disableButton(p2Btn, p1Btn, "p1");
+
     playStart = "p1";
     p2Btn.setAttribute("disabled", "disabled");
     p1Btn.removeAttribute("disabled");
@@ -112,8 +114,8 @@ p2Btn.addEventListener("click", (evtp2) => {
 });
 
 setPlayerName.addEventListener("click", (eventName) => {
-  let Player1name = prompt("set player-1 name");
-  let Player2name = prompt("set player-2 name");
+  Player1name = prompt("set player-1 name");
+  Player2name = prompt("set player-2 name");
   nameSet1.textContent = Player1name;
   nameSet2.textContent = Player2name;
   nameSet3.textContent = Player1name;
@@ -128,8 +130,6 @@ resetBtn.addEventListener("click", (evnt) => {
   p2Score.textContent = p2ScoreValue;
   let diceRandomGenerator;
   diceELm.textContent = diceRandomGenerator;
-  //   disableButton(p1Btn, p2Btn, "p2");
-  //   disableButton(p2Btn, p1Btn, "p1");
   p1Btn.removeAttribute("disabled");
   p2Btn.removeAttribute("disabled");
   playStart = playersInArray[Math.floor(Math.random() * 2)];
@@ -143,6 +143,8 @@ resetBtnAll.addEventListener("click", (evntAll) => {
   p1WonScoreValue = 0;
   p2WonScoreValue = 0;
   gameOver = false;
+  Player1name = "Player-1";
+  Player2name = "Player-2";
   playingToBtn.textContent = winningScore;
   p1Score.textContent = p1ScoreValue;
   p2Score.textContent = p2ScoreValue;
@@ -151,9 +153,11 @@ resetBtnAll.addEventListener("click", (evntAll) => {
   totalMatch.textContent = totalMatchPlayed;
   player1WonMatch.textContent = p1WonScoreValue;
   player2WonMatch.textContent = p2WonScoreValue;
-  //   disableButton(p1Btn, p2Btn, "p2");
-  //   disableButton(p2Btn, p1Btn, "p1");
   p1Btn.removeAttribute("disabled");
   p2Btn.removeAttribute("disabled");
+  nameSet1.textContent = Player1name;
+  nameSet2.textContent = Player2name;
+  nameSet3.textContent = Player1name;
+  nameSet4.textContent = Player2name;
   playStart = playersInArray[Math.floor(Math.random() * 2)];
 });
