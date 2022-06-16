@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+
+  <body>
+    <div
+      class="container-main"
+      style="background-image: url('/dice-background-001.jpg'); height: 100vh"
+    >
+      <div class="container">
+        <h1 id="firstH1">Dice Game</h1>
+        <br />
+        <p id="scoreBoard" style="color: rgb(0, 98, 255)">Score Board</p>
+        <div class="scoreBoardContainer" style="background-color: powderblue">
+          <h6 style="color: rgb(0, 98, 255)">
+            <p>Total Match Played : <span class="playedMatch">0</span></p>
+            <p>
+              <span class="nameSet1">Player-1</span> Won:
+              <span class="MatchWon1">0</span>
+            </p>
+            <p>
+              <span class="nameSet2">Player-2</span> Won:
+              <span class="MatchWon2">0</span>
+            </p>
+          </h6>
+        </div>
+        <br />
+        <p id="letPlayGame" style="color: rgb(0, 98, 255)">Let's Play A Game</p>
+        <div class="mainGamePart" style="background-color: powderblue">
+          <form>
+            <input
+              type="number"
+              id="inputScore"
+              placeholder="set the winning score"
+            />
+          </form>
+          <p id="pc1" style="color: rgb(0, 98, 255)">
+            Winning Score : <span class="playingTo">0</span>
+          </p>
+
+          <h1 style="color: rgb(0, 98, 255)">
+            <p>
+              Score:
+              <span id="p1Score">0</span>
+              Vs.
+              <span id="p2Score">0</span>
+            </p>
+          </h1>
+
+          <h1 style="color: rgb(0, 98, 255)">
+            <p1> Dice: <span id="Dice"></span></p1>
+          </h1>
+        </div>
+
+        <br />
+        <button class="btn btn-primary" id="p1Btn">
+          <span class="nameSet3">Player-1</span>
+        </button>
+        <button class="btn btn-primary" id="p2Btn">
+          <span class="nameSet4">Player-2</span>
+        </button>
+        <button id="resetBtn" class="btn btn-primary">Reset</button>
+        <button id="resetBtnAll" class="btn btn-danger">Reset All</button>
+        <button id="setPlayerName" class="btn btn-primary">
+          Set Player Name
+        </button>
+      </div>
+    </div>
+    <script src="/scirpt.js"></script>
+  </body>
+</html>

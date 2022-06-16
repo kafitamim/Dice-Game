@@ -1,0 +1,30 @@
+.scoreBoardContainer {
+  display: block;
+  margin: auto;
+  border: 3px solid rgb(105, 157, 255);
+  padding: 10px;
+}
+
+.mainGamePart {
+  display: block;
+  margin: auto;
+  border: 3px solid rgb(105, 157, 255);
+  padding: 10px;
+}
+#firstH1 {
+  color: rgb(0, 204, 255);
+  text-size-adjust: bold;
+  text-decoration-style: solid;
+}
+
+.btn-primary:hover {
+  /*formatting goes here*/
+  color: rgb(0, 242, 255);
+  text-transform: capitalize;
+}
+
+.btn-danger:hover {
+  /*formatting goes here*/
+  color: rgb(0, 242, 255);
+  text-transform: capitalize;
+}
